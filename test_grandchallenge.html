@@ -1,0 +1,715 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Avatar-based Multimodal Empathetic Conversation.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The ACM Multimedia Asia 2025 Grand Challenge: Multimodal Multiethnic Talking-Head Video Generation</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-PYVRSFMDRL');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" href="">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <!--  <script src="./static/js/index.js"></script>-->
+    <style>
+        /* --- 1. 全局样式和颜色修正 --- */
+        
+        /* 设置页面基础文本（正文、列表等）为纯黑色 */
+        body, p, .content, li, td, .team-card, strong {
+            color: #000000 !important;
+        }
+    
+        /* 设置所有标题和表格头为纯黑色 */
+        h1, h2, h3, h4, h5, h6, .title, .subtitle, th {
+            color: #000000 !important;
+        }
+    
+        /* --- 2. 【核心】按钮样式修正 --- */
+        /* 将导航按钮设置为深灰色背景和白色字体 */
+        .publication-links .button.is-dark {
+            background-color: #4a4a4a !important; /* 深灰色背景 */
+            color: #ffffff !important;           /* 【关键】白色字体 */
+            border-color: transparent !important;
+        }
+    
+        /* 按钮鼠标悬停效果 */
+        .publication-links .button.is-dark:hover {
+            background-color: #6a6a6a !important;
+        }
+    
+    
+        /* --- 3. 原始布局和其他特殊颜色样式 --- */
+        
+        /* JSON语法高亮 (保留特殊颜色) */
+        pre {outline: 1px solid #ccc; }
+         .string { color: green !important; }
+         .number { color: darkorange !important; }
+         .boolean { color: blue !important; }
+         .null { color: magenta !important; }
+         .key { color: red !important; }
+    
+        /* 表格布局 */
+        ._table{width: 100%; border-collapse: collapse; border:0px;}
+        ._table thead tr {font-size: 13px; text-align: center; background-color: rgba(230, 255, 250, 0.92); font-weight:bold;}
+        ._table td{line-height: 20px; text-align: center; padding: 4px 10px 3px 10px; height: 18px;border: 0px solid #ffffff;}
+        ._table tbody tr {background: #fff; font-size: 13px;}
+        ._table tbody tr:nth-child(2n){ background: #f3f3f3;}
+    
+        /* 页面基础布局 */
+        body {
+          font-family: "Arial", sans-serif;
+          background-color: #f9f9f9;
+          margin: 0;
+          padding: 2em;
+        }
+    
+        /* 标题布局 */
+        h1 {
+            text-align: center;
+            font-size: 2.5em;       
+            font-weight: 800;       
+            margin-bottom: 1em;
+        }
+    
+        /* 团队卡片布局 */
+        .team-container {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 1em;
+          max-width: 900px;
+          margin: 2em auto;
+        }
+    
+        .team-card {
+          background-color: #ffffff;
+          border: 1px solid #ddd;
+          border-radius: 10px;
+          padding: 1em;
+          text-align: center;
+          font-weight: bold;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+          transition: transform 0.2s ease;
+        }
+    
+        .team-card:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title">The ACM Multimedia Asia 2025 Grand Challenge: Multimodal Multiethnic Talking-Head Video Generation</h1>
+
+
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <!-- Data Link. -->
+                                <span class="link-block">
+                                    <a href="#introduction"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span>Introduction</span>
+                                    </a>
+                                </span>
+                                <!-- Data Link. -->
+                                <span class="link-block">
+                                    <a href="#dataset"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span>Dataset</span>
+                                    </a>
+                                </span>
+                                <!-- Paper Link. -->
+                                <span class="link-block">
+                                    <a href="#task"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span>Task & Evaluation</span>
+                                    </a>
+                                </span>
+                                <!-- Code Link. -->
+                                <span class="link-block">
+                                    <a href="#submission"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span>Participate</span>
+                                    </a>
+                                </span>
+
+                                <span class="link-block">
+                                    <a href="#timeline"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span>Timeline</span>
+                                    </a>
+                                </span>
+
+                                <!-- <span class="link-block">
+                                    <a href="https://www.codabench.org/competitions/4897/"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span>CodaBench</span>
+                                    </a>
+                                </span> -->
+
+                                <span class="link-block">
+                                    <a href="https://github.com/luna-ai-lab/DH-FaceVid-1K"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span>Project</span>
+                                    </a>
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+  <!-- 标题已修改为欢迎语 -->
+<!-- START: 霓虹幻彩欢迎语 (这是一个完整的、自包含的代码块) -->
+<div style="text-align: center;">
+    <style>
+        /* 动画效果必须在这里定义 */
+        @keyframes animate-gradient-welcome {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+    <p style="
+        font-size: 2em; 
+        margin: 2em 0; 
+        font-weight: bold;
+        /* --- 核心幻彩效果样式 --- */
+        background: linear-gradient(90deg, #ff00de, #00f2ff, #ff8f00, #ff00de);
+        background-size: 400% 400%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: animate-gradient-welcome 10s ease-in-out infinite;
+        text-shadow: 
+            0 0 5px rgba(255, 255, 255, 0.5),
+            0 0 10px #ff00de,
+            0 0 20px #00f2ff;
+    ">
+        Registration is now open. We warmly welcome your registration and participation!
+    </p>
+</div>
+<!-- END: 霓虹幻彩欢迎语 -->
+<!-- 
+    【重要】下面的原始团队列表已被完全注释掉。
+    当有团队注册后，您只需删除开头 <!-- 和结尾 --> 
+
+<!--
+<div class="team-container">
+    <div class="team-card">He‘s mates</div>
+    <div class="team-card">STU-ZZG</div>
+    <div class="team-card">DZ</div>
+    <div class="team-card">smiles lab acmmm2025</div>
+    <div class="team-card">EchoEmotion</div>
+    <div class="team-card">xAGI</div>
+    <div class="team-card">AI4AI</div>
+    <div class="team-card">HaHaHa Team</div>
+    <div class="team-card">CCNU-team</div>
+    <div class="team-card">SYSU_RUNNER</div>
+    <div class="team-card">Timi</div>
+    <div class="team-card">IMS</div>
+    <div class="team-card">GZYZWYQH</div>
+    <div class="team-card">NeuChamp</div>
+    <div class="team-card">TalkingHead-Runner</div>
+    <div class="team-card">free style</div>
+    <div class="team-card">ERC</div>
+    <div class="team-card">SuperEmoNLP</div>
+    <div class="team-card">PKBJ</div>
+    <div class="team-card">It's MyGO!!!!!</div>
+</div>
+-->
+<div class="notification is-warning is-light has-text-centered">
+    <strong>📢 Important:</strong> All participants are requested to review the 
+<a href="https://docs.google.com/document/d/1Wo-g8iyrT8gNPCm3Tro-J5eZlWqQRTVuSN2nowwI0iQ/edit?tab=t.0#heading=h.5405osv0wrj1">Submission Guidelines</a>.
+    </div>
+    <!-- News Section -->
+    <section class="news">
+        <div class="container is-max-desktop">
+          <div id="news" class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3">News & Updates</h2>
+              <div class="content has-text-left">
+                <ul style="list-style-position: outside; padding-left: 1.5em;">
+                  <li style="text-indent: -1.5em; padding-left: 1.5em;">
+                    <strong>🆕 September 9, 2025:</strong> The submission portal is now open. Please send the download link for your test results to the submission email address: 
+                    <a href="mailto:24b903117@stu.hit.edu.cn">24b903117@stu.hit.edu.cn</a>.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+
+            <!-- <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Leaderboard</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            Congratulations to the winners!
+                        </p>
+                        <table class="._table table-bordered table-striped" align="center">
+                            <tbody align="center" valign="center">
+                            <tr>
+                                <td>Rank</td>
+                                <td>Team</td>
+                                <td>Score</td>
+                              </tr>
+                            <tr>
+                              <td>1</td>
+                              <td>Token</td>
+                              <td>63.2064</td>
+                            </tr>
+                            <tr>
+                              <td>2</td>
+                              <td>USTC-IAT-United</td>
+                              <td>62.1149</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>ppjj</td>
+                                <td>59.8638</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>GXU-LIPE</td>
+                                <td>59.6864</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>DMCV</td>
+                                <td>59.3998</td>
+                            </tr>
+                            
+                        </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div> -->
+            
+            <!-- Abstract. -->
+            <div id="introduction" class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Introduction</h2>
+                    <div class="content has-text-justified">
+
+                        <div style="text-align: center;">
+                            <img src="static\files\figure1.PNG" width="90%" alt="">
+                            <p><b>Overview: AvaMERG Task.</b></p>
+                        </div>
+
+                        <p>
+                            We propose the "Multimodal Multiethnic Talking-Head Video Generation" Grand Challenge on the ACM Multimedia Asia 2025 platform. This challenge aims to advance the state-of-the-art beyond models that often exhibit poor generalization across different ethnicities and suffer from slow inference speeds. Given a static reference face and multimodal prompts (such as audio or text), models are expected to generate high-quality, realistic, and expressive talking-head videos that feature strong identity consistency, accurate lip synchronization, and controllable speaking styles.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Paper video. -->
+            <div id="task" class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Challenge Task Definition</h2>
+                    <div class="content has-text-justified">
+            
+                        <p><b>Task: High-Quality Talking-Head Video Generation</b></p>
+                        
+                        <!-- 新增的图片 -->
+                        <div style="text-align: center;">
+                            <img src="static/files/task.jpg" width="90%" alt="Challenge Task Overview">
+                            <br> <!-- 添加一个换行以增加与下方文本的间距 -->
+                        </div>
+            
+                        <p>
+                            Participants are required to train a generalizable, high-performance talking-head video generation model. While we recommend using the provided <b>DH-FaceVid-1K dataset</b> for training, participants are free to use any additional or alternative training datasets. There are no restrictions on the technical architecture or experimental setups. This means that for each test sample, beyond the provided reference face image and speaking audio, participants are free to choose the input modalities for their model (e.g., using phoneme labels or text prompts derived from the audio). Furthermore, we do not impose any limitations on the training hardware configurations, such as the operating system or graphics cards used.
+                        </p>
+                     
+                        <p>
+                            After completing model training, participants are required to use their trained model to perform inference on the test set samples, which are provided in the official Hugging Face repository: <a href="https://huggingface.co/datasets/jjuik2014/MMAsia-Challenge-Testset" target="_blank">https://huggingface.co/datasets/jjuik2014/MMAsia-Challenge-Testset</a>. Subsequently, they must submit the generated talking-head videos as instructed in the Submission Guidelines. Optionally, participants may create an online demo page to facilitate our evaluation of each method's specific inference speed.
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+            <!--/ Challenge Task Definition. -->
+
+<!-- Evaluation Metrics. -->
+<div id="evaluation" class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+        <h2 class="title is-3">Evaluation Metrics</h2>
+        <div class="content has-text-justified">
+
+            <p><strong>Objective Metrics</strong></p>
+            <p>
+                Below are the objective metrics evaluated on the test set of DH-FaceVid-1K. We will use these metrics to automatically evaluate the performance of the submitted test set samples. Participants can also use them to evaluate model performance during training.
+            </p>
+            <ul>
+                <li><strong>FID (Fréchet Inception Distance)</strong></li>
+                <li><strong>FVD (Fréchet Video Distance)</strong></li>
+                <li><strong>Inference Speed (frames per second, FPS)</strong></li>
+                <li><strong>Sync-C & Sync-D (Synchronization Confidence & Distance for lip-sync quality)</strong></li>
+                <li><strong>AKD (Average Keypoint Distance for facial motion accuracy)</strong></li>
+                <li><strong>F-LMD (Facial Landmark Distance for expression fidelity)</strong></li>
+            </ul>
+            <p>
+                These metrics quantitatively assess generation quality, temporal coherence, speed, and speaking style transferability in face video synthesis.
+            </p>
+
+            <br> 
+
+            <p><strong>Subjective Evaluation</strong></p>
+            <p>
+                For manual subjective evaluation, we will assess the following aspects in the videos provided by the authors: <strong>identity consistency, video quality, lip synchronization, and speaking style controllability</strong>. Each item has a full score of 5 points.
+            </p>
+
+            <br>
+
+            <p><strong>Final Ranking</strong></p>
+            <p>
+                The final rankings of participants will be determined based on a combination of these objective and subjective scores, along with the model's inference speed demonstrated on the optional web demo page.
+            </p>
+
+        </div>
+    </div>
+</div>
+<!--/ Evaluation Metrics. -->
+ 
+             <!-- Datasets. -->
+             <div class="columns is-centered has-text-centered">
+                <div id="dataset" class="column is-four-fifths">
+                    <h2 class="title is-3">Dataset</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            The dataset for this challenge is <b>DH-FaceVid-1K: A Large-Scale High-Quality Dataset for Face Video Generation</b>.
+                        </p>
+                        <p>
+                            The dataset is available for download on the official GitHub repository: <a href="https://github.com/luna-ai-lab/DH-FaceVid-1K" target="_blank">https://github.com/luna-ai-lab/DH-FaceVid-1K</a>.
+                        </p>
+            
+                        <!-- 数据集概览图片 -->
+                        <div style="text-align: center;">
+                            <img src="static\files\sample.jpg" width="90%" alt="Overview of the DH-FaceVid-1K dataset">
+                            <br>
+                        </div>
+            
+                        <!-- 关于测试集样本的描述 -->
+                        <p>
+                            For the test set samples, we provide the reference face image, speaking audio, and corresponding text annotations. An example is shown below:
+                        </p>
+            
+                        <!-- 测试集样本示例图片 -->
+                        <div style="text-align: center;">
+                            <!-- 请将下面的 src 替换为您的测试集样本示例图片的实际路径 -->
+                            <img src="static/images/test_sample_example.png" width="90%" alt="Example of a test set sample">
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!DOCTYPE html>
+<html>
+<head>
+    <title>Timeline with AoE Time</title>
+    <!-- 为了让样式生效，我加入了一个简单的CSS框架的链接 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <style>
+        /* 您可以添加自定义样式 */
+        #current-time-container {
+            margin-bottom: 1rem;
+            font-size: 1.1em;
+        }
+        #current-time {
+            font-weight: bold;
+            color: #d9534f; /* 红色以突出显示 */
+        }
+    </style>
+</head>
+<body>
+    <div class="columns is-centered has-text-centered">
+        <div id="timeline" class="column is-four-fifths">
+            <h2 class="title is-3">Timeline</h2>
+            
+            <!-- 显示当前 AoE 时间 -->
+            <p id="current-time-container">
+                <strong>Current Time (Anywhere on Earth, UTC-12):</strong> 
+                <span id="current-time"></span>
+            </p>
+
+            <div class="content has-text-justified">
+                <p>
+                    Please note: The submission deadline is at 11:59 p.m. (<a href="https://www.timeanddate.com/time/zones/aoe" style="color:red">Anywhere on Earth</a>) of the stated deadline date.
+                </p>
+                <table class="table is-bordered is-striped" align="center">
+                    <tbody align="center" valign="center">
+                    <tr>
+                      <td><s>Training data and participant instruction release</s></td>
+                      <td><s>September 8, 2025</s></td>
+                    </tr>
+                    <tr>
+                      <td>Registration deadline</td>
+                      <td>September 19, 2025</td>
+                    </tr>
+                    <tr>
+                        <td>Test dataset release</td>
+                        <td>September 9, 2025</td>
+                    </tr>
+                    <tr>
+                        <td>Result submission start</td>
+                        <td>September 10, 2025</td>
+                    </tr>
+                    <tr>
+                        <td>Result submission end</td>
+                        <td>September 20, 2025</td>
+                    </tr>
+                    <tr>
+                        <td>Paper invitation notification</td>
+                        <td>September 24, 2025</td>
+                    </tr>
+                    <tr>
+                        <td>Paper submission deadline</td>
+                        <td>October 4, 2025</td>
+                    </tr>
+                    <tr>
+                        <td>Camera-ready paper</td>
+                        <td>October 24, 2025</td>
+                    </tr>
+
+                    <!-- <tr>
+                        <td><b style="color: red">Challenge Paper Submission Deadline</b>(follow <a href="https://2024.acmmm.org/important-dates  ">MM2024 Workshop Dates</a>)</td>
+                        <td><b style="color: red">August 19, 2024</b></td>
+                    </tr> -->
+
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript 代码，用于实时更新 AoE 时间 -->
+    <script>
+        function updateAoeTime() {
+            // 1. 获取当前时间的 Date 对象
+            const now = new Date();
+            
+            // 2. 计算 AoE 时间 (UTC-12)
+            // 首先获取当前时间的UTC时间戳，然后减去12小时的毫秒数
+            const aoeTime = new Date(now.getTime() - (12 * 60 * 60 * 1000));
+            
+            // 3. 格式化 AoE 时间为字符串 (YYYY-MM-DD HH:MM:SS)
+            // 使用 toISOString() 方便地获取 UTC 时间格式，然后进行处理
+            const isoString = aoeTime.toISOString(); // 格式如: "2025-09-08T14:29:00.000Z"
+            const formattedAoeTime = isoString.substring(0, 10) + ' ' + isoString.substring(11, 19);
+
+            // 4. 将格式化后的时间更新到 HTML 元素中
+            document.getElementById('current-time').textContent = formattedAoeTime;
+        }
+        
+        // 页面加载后立即执行一次，避免延迟显示
+        updateAoeTime();
+        
+        // 每秒钟更新一次时间
+        setInterval(updateAoeTime, 1000);
+    </script>
+</body>
+</html>
+
+
+
+<!-- 
+[
+{
+    "id": "test-0",
+    "event": [{
+        "trigger": "advance",
+        "type": "Transport",
+        "arguments": [{
+            "name": "elements",
+            "role": "Artifact"
+        }, {
+            "name": "city",
+            "role": "Origin"
+        }, {
+            "name": "Baghdad",
+            "role": "Destination"
+        }]
+    }]
+},
+{
+    "id": "test-1",
+    "event": [{
+       ...
+    }]
+},
+...
+]
+ -->
+</pre>
+                      
+<!--                         <p>
+                            Link to <a href="#">Codalab</a>
+                        </p>
+                        <p>
+                            
+                            Participants can submit at <a href="https://www.codabench.org/competitions/">Codabench</a>.
+                        </p>
+                        <p>
+                            
+                            We will review the submissions publish the ranking here. 
+                            Feel free to contact us at <a href="22021110280@stu.xidian.edu.cn">email</a>.
+                            
+                        
+                        </p> -->
+<!-- 
+                        <p> Comming Soon </p>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- / Paper video. -->
+            <div class="columns is-centered has-text-centered">
+                <div id="baseline" class="column is-four-fifths">
+                    <h2 class="title is-3">Baseline</h2>
+                    <div class="content has-text-justified">
+                      
+                        <p>
+                            Link to the provided training dataset repository <a href="https://github.com/luna-ai-lab/DH-FaceVid-1K">DH-FaceVid-1K</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+        
+             <!-- <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Registration</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                             Welcome and please apply for the VSD challenge via a form at <a href="https://docs.google.com/forms/d/e/1FAIpQLSfuKXhaN5qa61rWlwaE3VpJD5FHcVLH25Un95wch6fCKiXIGQ/viewform?usp=sf_link">this link</a>.
+                        </p>
+                        <p>
+                            Feel free to contact us at <a href="mailto: vsdchallenge@gmail.com">vsdchallenge@gmail.com</a>.
+                        </p>
+                    </div>
+                </div>
+            </div> -->
+
+            
+            
+            
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Rewards</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            Top-ranked participants in this competition will receive a certificate of achievement,  and will be recommended to submit a technical paper to <a href="https://mmasia2025.org/">ACM MM Asia 2025</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>   
+
+            <!-- / Paper video. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Organizers</h2>
+                    <div class="content has-text-justified">
+                        
+                        <p><a href="mailto:didonglin@lixiang.com">Donglin Di</a> (Li Auto)</p>
+                        <p><a href="mailto:lei.fan1@unsw.edu.au">Lei Fan</a> (The University of New South Wales)</p>
+                        <p><a href="mailto:thsu@hit.edu.cn">Tonghua Su</a> (Harbin Institute of Technology)</p>
+                        <p><a href="mailto:xyang21@ustc.edu.cn">Xun Yang</a> (University of Science and Technology of China)</p>
+                        <p><a href="mailto:maguire9993@gmail.com">Yongjia Ma</a> (Li Auto)</p>
+                        <p><a href="mailto:24b903117@stu.hit.edu.cn">He Feng</a> (Harbin Institute of Technology)</p>
+            
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">References</h2>
+                    <div class="content has-text-justified">
+                        <p>                     
+                            [1] Di D, Feng H, Sun W, et al. DH-FaceVid-1K: A Large-Scale High-Quality Dataset for Face Video Generation[C]//Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), 2025.
+                        </p>
+                     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+</body>
+<script>
+    // function jsonShowFn(json){
+    //     if (!json.match("^\{(.+:.+,*){1,}\}$")) {
+    //         return json           //判断是否是json数据，不是直接返回
+    //     }
+
+    //     if (typeof json != 'string') {
+    //         json = JSON.stringify(json, undefined, 2);
+    //     }
+    //     json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    //     return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function(match) {
+    //         var cls = 'number';
+    //         if (/^"/.test(match)) {
+    //             if (/:$/.test(match)) {
+    //                 cls = 'key';
+    //             } else {
+    //                 cls = 'string';
+    //             }
+    //         } else if (/true|false/.test(match)) {
+    //             cls = 'boolean';
+    //         } else if (/null/.test(match)) {
+    //             cls = 'null';
+    //         }
+    //         return '<span class="' + cls + '">' + match + '</span>';
+    //     });
+    // }
+    // $('#jsonShow').html(jsonShowFn('[{"imd_id":1,"triple_list":["s":"book","o":"table"]}]'));
+</script>
+</html>
