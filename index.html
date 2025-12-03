@@ -267,11 +267,18 @@
               <h2 class="title is-3">News & Updates</h2>
               <div class="content has-text-left">
                 <ul style="list-style-position: outside; padding-left: 1.5em;">
-                  <li style="text-indent: -1.5em; padding-left: 1.5em;">
-                    <strong>🆕 September 9, 2025:</strong> The submission portal is now open. Please send the download link for your test results to the submission email address: 
-                    <a href="mailto:24b903117@stu.hit.edu.cn">24b903117@stu.hit.edu.cn</a>.
-                  </li>
-                </ul>
+  
+                    <!-- 第一条：有显示的图标 -->
+                    <li style="text-indent: -1.5em; padding-left: 1.5em; margin-bottom: 0.5em;">
+                      <span style="display: inline-block; width: 1.5em;">🆕</span><strong>December 3, 2025:</strong> The detailed program for the challenge session has been officially released.
+                    </li>
+                  
+                    <!-- 第二条：使用 visibility: hidden 制作隐形占位符 -->
+                    <li style="text-indent: -1.5em; padding-left: 1.5em;">
+                      <span style="display: inline-block; width: 1.5em; visibility: hidden;">🆕</span><strong>October 15, 2025:</strong> The final ranking and results of the challenge have been released. Congratulations to the winning teams!
+                    </li>
+                  
+                  </ul>
               </div>
             </div>
           </div>
@@ -376,14 +383,66 @@
 
 <!-- Evaluation Metrics. -->
 <div id="participation" class="columns is-centered has-text-centered">
-    <div class="column is-four-fifths">
-        <h2 class="title is-3">Participation</h2>
-        <div class="content has-text-justified">
-            <p>
-                The registration process is simple. Please submit your team name via this Google Form: <a href="https://docs.google.com/forms/d/1w2vO4VlJefpM7KPodLJr3omOMIkLgaDG8LahCKH4Eqw" target="_blank">https://docs.google.com/forms/d/1w2vO4VlJefpM7KPodLJr3omOMIkLgaDG8LahCKH4Eqw</a>. You can use a placeholder for the results link during the initial submission and update it later.
-            </p>
-        </div>
+  <div class="column is-four-fifths">
+    <h2 class="title is-3">Participation</h2>
+    
+    <!-- 原有的注册说明 -->
+    <div class="content has-text-justified">
+      <p>
+        The registration process is simple. Please submit your team name via this Google Form: <a href="https://docs.google.com/forms/d/1w2vO4VlJefpM7KPodLJr3omOMIkLgaDG8LahCKH4Eqw" target="_blank">https://docs.google.com/forms/d/1w2vO4VlJefpM7KPodLJr3omOMIkLgaDG8LahCKH4Eqw</a>. You can use a placeholder for the results link during the initial submission and update it later.
+      </p>
     </div>
+
+    <!-- 新增：已注册队伍表格 -->
+    <div class="content">
+      <h4 class="title is-5 mt-5">Registered Teams</h4>
+      <div class="table-container">
+        <table class="table is-bordered is-striped is-hoverable is-fullwidth">
+          <thead>
+            <tr>
+              <th class="has-text-centered" style="width: 20%;">ID</th>
+              <th class="has-text-centered">Team Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>3dScanning</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>AnthGen</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>cmvs</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>DHAL</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>HairBrother_Team</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>SZFaceU</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Talk_Sclab</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Team_EQUES</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
 </div>
 <div id="evaluation" class="columns is-centered has-text-centered">
     <div class="column is-four-fifths">
@@ -445,15 +504,10 @@
             
                         <!-- 关于测试集样本的描述 -->
                         <p>
-                            For the test set samples, we provide the reference face image, speaking audio, and corresponding text annotations. An example is shown below:
+                            For the test set samples, we provide the reference face image, speaking audio, and corresponding text annotations. An example is shown above.
                         </p>
             
                         <!-- 测试集样本示例图片 -->
-                        <div style="text-align: center;">
-                            <!-- 请将下面的 src 替换为您的测试集样本示例图片的实际路径 -->
-                            <img src="static/images/test_sample_example.png" width="90%" alt="Example of a test set sample">
-                        </div>
-                        
                     </div>
                 </div>
             </div>
@@ -486,7 +540,7 @@
                 <strong>Current Time (Anywhere on Earth, UTC-12):</strong> 
                 <span id="current-time"></span>
             </p>
-
+    
             <div class="content has-text-justified">
                 <p>
                     Please note: The submission deadline is at 11:59 p.m. (<a href="https://www.timeanddate.com/time/zones/aoe" style="color:red">Anywhere on Earth</a>) of the stated deadline date.
@@ -498,39 +552,40 @@
                       <td><s>September 8, 2025</s></td>
                     </tr>
                     <tr>
-                      <td>Registration deadline</td>
-                      <td>September 30, 2025</td>
+                      <td><s>Registration deadline</s></td>
+                      <td><s>September 30, 2025</s></td>
                     </tr>
                     <tr>
-                        <td>Test dataset release</td>
-                        <td>September 9, 2025</td>
+                        <td><s>Test dataset release</s></td>
+                        <td><s>September 9, 2025</s></td>
                     </tr>
                     <tr>
-                        <td>Result submission start</td>
-                        <td>September 10, 2025</td>
+                        <td><s>Result submission start</s></td>
+                        <td><s>September 10, 2025</s></td>
                     </tr>
                     <tr>
-                        <td>Result submission end</td>
-                        <td>September 30, 2025</td>
+                        <td><s>Result submission end</s></td>
+                        <td><s>September 30, 2025</s></td>
                     </tr>
                     <tr>
-                        <td>Paper invitation notification</td>
-                        <td>October 1, 2025</td>
+                        <td><s>Paper invitation notification</s></td>
+                        <td><s>October 1, 2025</s></td>
                     </tr>
                     <tr>
-                        <td>Paper submission deadline</td>
-                        <td>October 14, 2025</td>
+                        <td><s>Paper submission deadline</s></td>
+                        <td><s>October 14, 2025</s></td>
                     </tr>
                     <tr>
-                        <td>Camera-ready paper</td>
-                        <td>October 24, 2025</td>
+                        <td><s>Camera-ready paper</s></td>
+                        <td><s>October 24, 2025</s></td>
                     </tr>
-
-                    <!-- <tr>
-                        <td><b style="color: red">Challenge Paper Submission Deadline</b>(follow <a href="https://2024.acmmm.org/important-dates  ">MM2024 Workshop Dates</a>)</td>
-                        <td><b style="color: red">August 19, 2024</b></td>
-                    </tr> -->
-
+                    
+                    <!-- 新增：会议时间 -->
+                    <tr>
+                        <td><strong>ACM Multimedia Asia 2025 Challenge Session</strong></td>
+                        <td><strong>December 9, 2025</strong></td>
+                    </tr>
+    
                 </tbody>
                 </table>
             </div>
@@ -650,15 +705,78 @@
             
             <div class="columns is-centered has-text-centered">
                 <div class="column is-four-fifths">
-                    <h2 class="title is-3">Rewards</h2>
-                    <div class="content has-text-justified">
-                        <p>
-                            Top-ranked participants in this competition will receive a certificate of achievement,  and will be recommended to submit a technical paper to <a href="https://mmasia2025.org/">ACM MM Asia 2025</a>.
-                        </p>
+                    <h2 class="title is-3">Challenge Results</h2>
+                    <div class="content has-text-centered">
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 10px;">
+                                <span style="font-size: 1.3em; color: #d4af37;">🏆 <strong>1st Place:</strong> CMVS</span>
+                            </li>
+                            <li style="margin-bottom: 10px;">
+                                <span style="font-size: 1.2em; color: #a9a9a9;">🥈 <strong>2nd Place:</strong> SZFaceU</span>
+                            </li>
+                            <li style="margin-bottom: 10px;">
+                                <span style="font-size: 1.2em; color: #cd7f32;">🥉 <strong>3rd Place:</strong> EQUES</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </div>   
+            </div>
 
+            <div class="column is-four-fifths">
+                <h2 class="title is-3 has-text-centered">Challenge Session Program</h2>
+                <p class="has-text-centered"><strong>Date:</strong> December 9, 2025</p>
+            
+                <div class="content">
+                    <h4 class="title is-5">09:30 - 10:00: Opening & Awards</h4>
+                    <ul>
+                        <li><strong>09:30 - 09:40:</strong> Opening Remarks & Challenge Introduction</li>
+                        <li><strong>09:40 - 10:00:</strong> Award Presentation</li>
+                    </ul>
+            
+                    <h4 class="title is-5">10:30 - 11:30: Team Presentations</h4>
+            
+                    <!-- Team 3 (EQUES) -->
+                    <div class="box">
+                        <p><strong>10:30 - 10:50 | 3rd Place: Team EQUES</strong></p>
+                        <p><strong>Title:</strong> AKITalk: Audio-Implicit Keypoints for Identity-Preserving Talking-Head Video Synthesis</p>
+                        <p><strong>Presenter:</strong> Riku Takahashi (HOSEI University)</p>
+                        <details>
+                            <summary>Click to view Abstract</summary>
+                            <p style="font-size: 0.9em; margin-top: 10px;">
+                                Existing talking-head video generation methods using speech audio often suffer from high computational costs or degraded identity preservation due to reliance on external super-resolution models. To address these issues, we propose a lightweight framework that predicts temporally consistent implicit 3D features from a reference image and speech audio. These features guide a generator trained on large-scale data to synthesize high-quality video frames efficiently. Experimental results demonstrate that our method achieves comparable or superior visual quality and identity preservation, while ensuring high inference efficiency. This balance of realism and computational performance suggests broad applicability in real-world scenarios such as virtual avatars and social media.
+                            </p>
+                        </details>
+                    </div>
+            
+                    <!-- Team 2 (SZFaceU) -->
+                    <div class="box">
+                        <p><strong>10:50 - 11:10 | 2nd Place: Team SZFaceU</strong></p>
+                        <p><strong>Title:</strong> FlowTalk: Real-Time Audio-Driven Talking Head Synthesis via Motion-Space Flow Matching</p>
+                        <p><strong>Presenter:</strong> Kaijun Deng (Shenzhen University)</p>
+                        <details>
+                            <summary>Click to view Abstract</summary>
+                            <p style="font-size: 0.9em; margin-top: 10px;">
+                                Audio-driven talking head synthesis has achieved significant progress, yet existing methods face critical trade-offs among generation quality, inference efficiency, and cross-ethnic generalization. Diffusion-based approaches produce high-fidelity results but suffer from slow inference due to iterative denoising, while GAN-based methods achieve faster speed at the cost of reduced motion naturalness and limited generalization. To address these challenges, we propose FlowTalk, a novel framework that enables real-time high-fidelity talking head video synthesis. Our approach leverages Flow Matching technology to perform efficient motion modeling in a decoupled motion space rather than pixel space, achieving significant speedup while maintaining generation quality. Specifically, we adopt an off-the-shelf motion extractor to disentangle facial appearance from motion, and employ an OT-based flow matching model with a transformer architecture to predict identity-agnostic motion sequences conditioned on audio features. To improve cross-ethnic generalization, we train on a balanced combination of DH-FaceVid-1K and HDTF datasets with HuBert-CN as the audio encoder. Experimental results demonstrate that FlowTalk achieves over 100 FPS with 32 ODE solver steps, approximately 5 times faster than diffusion-based baselines with 500 steps, while preserving comparable visual quality in lip synchronization, facial expressions, and head movements.
+                            </p>
+                        </details>
+                    </div>
+            
+                    <!-- Team 1 (CMVS) -->
+                    <div class="box">
+                        <p><strong>11:10 - 11:30 | 1st Place: Team CMVS</strong></p>
+                        <p><strong>Title:</strong> Detection-Aware Inference for Robust Talking-Head Video Generation</p>
+                        <p><strong>Presenter:</strong> Yueyi Yang (In-person)</p>
+                        <details>
+                            <summary>Click to view Abstract</summary>
+                            <p style="font-size: 0.9em; margin-top: 10px;">
+                                Talking-head video generation has seen significant progress with the rise of multimodal and multiethnic datasets; however, existing systems still suffer from stability issues when dealing with occluded or partially missing facial regions in the input. In this work, we present our model developed for the ACM Multimedia Asia 2025 Grand Challenge on Multimodal Multiethnic Talking Head Video Generation. Built upon the Hallo2 framework, our model introduces two key improvements to enhance inference robustness and usability. First, it detects cases where facial regions are heavily occluded or incompletely detected and automatically substitutes a static image across all frames, preventing inference failures and maintaining visual consistency when facial information is insufficient. Second, it supports multi-input inference, enabling the generation of multiple talking-head videos within a single execution process. These modifications result in a more reliable and flexible talking-head generation pipeline, suitable for diverse multimodal datasets and large-scale evaluation.
+                            </p>
+                        </details>
+                    </div>
+            
+                </div>
+            </div>
+            
             <!-- / Paper video. -->
             <div class="columns is-centered has-text-centered">
                 <div class="column is-four-fifths">
